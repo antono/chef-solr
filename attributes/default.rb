@@ -2,13 +2,13 @@ include_attribute "jetty"
 
 expand!
 
-default[:solr][:version]   = "3.6.2"
-default[:solr][:link]      = "http://www.mirrorservice.org/sites/ftp.apache.org/lucene/solr/#{solr.version}/apache-solr-#{solr.version}.tgz"
-default[:solr][:checksum]  = "1b4552ba95c8456d4fbd596e82028eaa0619b6942786e98e1c4c31258543c708" #sha265
+default[:solr][:version]   = "4.3.0"
+default[:solr][:link]      = "http://archive.apache.org/dist/lucene/solr/#{solr.version}/solr-#{solr.version}.tgz"
+default[:solr][:checksum]  = "b28240167ce6dd6a957c548ea6085486a4d27a02a643c4812a6d4528778ea9b7" #sha265
 default[:solr][:directory] = "/usr/local/src"
-default[:solr][:download]  = "#{solr.directory}/apache-solr-#{solr.version}.tgz"
-default[:solr][:extracted] = "#{solr.directory}/apache-solr-#{solr.version}"
-default[:solr][:war]       = "#{solr.extracted}/dist/apache-solr-#{solr.version}.war"
+default[:solr][:download]  = "#{solr.directory}/solr-#{solr.version}.tgz"
+default[:solr][:extracted] = "#{solr.directory}/solr-#{solr.version}"
+default[:solr][:war]       = "#{solr.extracted}/dist/solr-#{solr.version}.war"
 
 default[:solr][:context_path]  = 'solr'
 default[:solr][:home]          = "#{node.jetty.home}/webapps/#{node.solr.context_path}"
